@@ -10,3 +10,6 @@ cordova/platforms
 cordova/plugins
 thumbs.db
 !.gitkeep
+*.log
+.vscode
+
