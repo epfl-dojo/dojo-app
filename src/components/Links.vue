@@ -18,7 +18,7 @@
 import axios from 'axios'
 export default {
   components: {
-    //LinksHolder
+    // LinksHolder
   },
   data () {
     return {

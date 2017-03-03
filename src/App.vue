@@ -24,7 +24,7 @@
         </div>
       </q-drawer>
 
-      <router-view></router-view>
+      <router-view class="layout-view"></router-view>
 
     </q-layout>
   </div>
@@ -45,5 +45,4 @@
   justify-content:center;
   font-size: small;
 }
-
 </style>
