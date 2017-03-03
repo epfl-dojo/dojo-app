@@ -4,12 +4,16 @@
     <!-- your content -->
     <div class="layout-padding">
       <!-- if you want automatic padding -->
-      Home<br />
-      <img src="~assets/dojo.png" />
+      Here comes the dojo archives.
+      A <a href="http://quasar-framework.org/components/timeline.html">timeline</a> would be great.
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {}
+  }
+}
 </script>

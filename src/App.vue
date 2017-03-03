@@ -7,20 +7,23 @@
           <i>menu</i>
         </button>
         <q-toolbar-title :padding="0">
-          EPFL dojo App
+          EPFL-dojo
         </q-toolbar-title>
       </div>
       <!-- Left side Drawer -->
       <q-drawer ref="drawer">
         <div class="list platform-delimiter">
-          <div class="list-header">
-      <!-- mettre ici le nom du menu -->
-          </div>
           <q-drawer-link icon="home" to="/">Home</q-drawer-link>
-          <q-drawer-link icon="mail" to="/log">Log</q-drawer-link>
+          <q-drawer-link icon="change_history" to="/events">Events</q-drawer-link>
+          <q-drawer-link icon="line_weight" to="/archives">Timeline</q-drawer-link>
+          <q-drawer-link icon="link" to="/links">Links</q-drawer-link>
+          <q-drawer-link icon="people" to="/about">About</q-drawer-link>
+        </div>
+        <div class="version">
+          v0.0.1 / v{{$q.version}}
         </div>
       </q-drawer>
-      
+
       <router-view></router-view>
 
     </q-layout>
@@ -35,4 +38,12 @@
 
 </script>
 
-<style></style>
+<style>
+.version {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: small;
+}
+
+</style>

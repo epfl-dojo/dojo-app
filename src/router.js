@@ -22,8 +22,18 @@ export default new VueRouter({
 
   routes: [
     { path: '/', component: load('Index') }, // Default
-    { path: '/log', component: load('log') }, // Default
-
+    // Archives / Log / Timeline
+    { path: '/log', component: load('Archives') },
+    { path: '/archives', component: load('Archives') },
+    { path: '/timeline', component: load('Archives') },
+    // News / Events
+    { path: '/news', component: load('Events') },
+    { path: '/events', component: load('Events') },
+    // Links
+    { path: '/links', component: load('Links') },
+    // Links
+    { path: '/about', component: load('About') },
+    // 404
     { path: '*', component: load('Error404') } // Not found
   ]
 })

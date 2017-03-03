@@ -4,7 +4,7 @@
     <!-- your content -->
     <div class="layout-padding">
       <!-- if you want automatic padding -->
-      Vue des logs des dojos
+      Here comes a bunch of links
     </div>
   </div>
 </template>
@@ -16,4 +16,3 @@ export default {
   }
 }
 </script>
-

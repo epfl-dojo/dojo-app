@@ -4,12 +4,15 @@
     <!-- your content -->
     <div class="layout-padding">
       <!-- if you want automatic padding -->
-      Home<br />
-      <img src="~assets/dojo.png" />
+      Here comes the story of this app. <a href="https://github.com/epfl-dojo">EPFL-Dojo</a> FTW !
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {}
+  }
+}
 </script>
