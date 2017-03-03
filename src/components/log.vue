@@ -4,7 +4,7 @@
     <!-- your content -->
     <div class="layout-padding">
       <!-- if you want automatic padding -->
-      hello toto
+      Vue des logs des dojos
     </div>
   </div>
 </template>
@@ -17,5 +17,3 @@ export default {
 }
 </script>
 
-<style>
-</style>
