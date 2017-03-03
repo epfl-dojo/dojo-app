@@ -17,9 +17,7 @@
 <script>
 import axios from 'axios'
 export default {
-  components: {
-    // LinksHolder
-  },
+  components: {},
   data () {
     return {
       links: []
