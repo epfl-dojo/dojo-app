@@ -6,8 +6,8 @@
       <!-- if you want automatic padding -->
       Here comes a bunch of links
       <ul id="dojo-links">
-        <li v-for="link in links">
-          <a :href="link.link_url">{{ link.link_title }}</a>
+        <li v-for="link in links" v-if="link.use_it">
+          <a :href="link.url">{{ link.title }}</a>
         </li>
       </ul>
     </div>
