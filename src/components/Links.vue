@@ -16,6 +16,7 @@
 
 <script>
 import axios from 'axios'
+import hjson from 'hjson'
 export default {
   components: {},
   data () {
