@@ -6,7 +6,7 @@
     <h4>Archives</h4>
   </div>
   <div class="timeline">
-     <archive-item :archives='archives'></archive-item>
+     <archive-item :archive='archive' v-for="archive in archives"></archive-item>
   </div>
 </div>
 </template>
@@ -18,19 +18,16 @@ export default {
   components: {ArchiveItem},
   data () {
     return {
-      archives: [],
-      events: []
+      archives: []
     }
   },
   created () {
     axios.get('https://raw.githubusercontent.com/epfl-dojo/dojo-data/master/src/archives.json')
     .then((response) => {
-      this.archives = response.data.archives
-    })
-    axios.get('https://raw.githubusercontent.com/epfl-dojo/dojo-data/master/src/events.json')
-    .then((response) => {
-      console.log(response.data)
-      this.events = response.data.events
+      console.log(response.data.archives)
+      this.archives = response.data.archives.sort(function (a, b) {
+        return b.dojoid - a.dojoid
+      })
     })
   }
 }
