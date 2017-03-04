@@ -5,7 +5,7 @@
     <div class="layout-padding">
       <!-- if you want automatic padding -->
       Home<br />
-      <img src="~assets/dojo.png" />
+      <img src="~assets/dojo.png" class="responsive" />
     </div>
   </div>
 </template>

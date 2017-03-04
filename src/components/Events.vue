@@ -4,6 +4,7 @@
     <!-- your content -->
     <div class="layout-padding">
       <!-- if you want automatic padding -->
+      <img src="https://unsplash.it/392/220?image=739" class="responsive" /><br>
       Here comes the next dojo information
     </div>
   </div>
