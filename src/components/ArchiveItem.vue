@@ -1,43 +1,32 @@
 <template>
-<!-- root node required -->
-<div>
-  <!-- item -->
   <div class="timeline-item" >
     <div class="timeline-badge">
-      <!-- badge with avatar -->
       <img src="~assets/dojo.png" />
     </div>
-    <!-- title -->
     <div class="timeline-title">
-      Dojo #{{ archive.dojoid }}
+      Dojo #{{ event.dojoid }} ({{ event.date }})
     </div>
-
-    <div class="card">
+    <div class="card" v-for="type in event.types">
       <div class="card-title">
-        {{ archive.kick }}
+        The {{ type.type }} session
       </div>
-      <img src="https://unsplash.it/350/150?random&1">
+      <img src="https://unsplash.it/350/150?random&">
       <div class="card-content">
-        {{ archive.desc }}
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">
-        Dojo avancés
-      </div>
-      <img src="https://unsplash.it/350/150?random&2">
-      <div class="card-content">
-        EPFL Dojo app with quasar <a href="https://github.com/epfl-dojo/dojo-app">Dojo App</a>
+        <h4>{{ type.kick }}</h4>
+        <span v-html="type.log"></span>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
   components: {},
-  props: ['archive']
+  props: ['event']
 }
 </script>
+<style>
+.card  {
+  margin: 20px;
+}
+</style>

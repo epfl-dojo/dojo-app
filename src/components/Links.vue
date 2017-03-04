@@ -24,10 +24,9 @@ export default {
     }
   },
   created () {
-    axios.get('https://raw.githubusercontent.com/epfl-dojo/dojo-data/master/src/links.json')
+    axios.get('https://raw.githubusercontent.com/epfl-dojo/dojo-data/master/links.hjson')
     .then((response) => {
-      console.log(response.data)
-      this.links = response.data.links
+      this.links = hjson.parse(response.data).links
     })
   }
 }

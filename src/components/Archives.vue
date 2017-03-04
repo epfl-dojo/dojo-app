@@ -6,26 +6,28 @@
     <h4>Archives</h4>
   </div>
   <div class="timeline">
-     <archive-item :archive='archive' v-for="archive in archives"></archive-item>
+     <archive-item :event='event' v-for="event in events"></archive-item>
   </div>
 </div>
 </template>
 
 <script>
 import axios from 'axios'
+import hjson from 'hjson'
 import ArchiveItem from './ArchiveItem'
 export default {
   components: {ArchiveItem},
   data () {
     return {
-      archives: []
+      events: []
     }
   },
   created () {
-    axios.get('https://raw.githubusercontent.com/epfl-dojo/dojo-data/master/src/archives.json')
+    axios.get('https://rawgit.com/epfl-dojo/dojo-data/master/events.hjson')
     .then((response) => {
-      console.log(response.data.archives)
-      this.archives = response.data.archives.sort(function (a, b) {
+      console.log(response.data.events)
+      let events = hjson.parse(response.data).events
+      this.events = events.sort(function (a, b) {
         return b.dojoid - a.dojoid
       })
     })
