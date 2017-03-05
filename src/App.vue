@@ -2,7 +2,7 @@
   <!-- Don't drop "q-app" class -->
   <div id="q-app">
     <q-layout>
-      <div slot="header" class="toolbar" style="background: #90e142">
+      <div slot="header" class="toolbar">
         <button class="hide-on-drawer-visible" @click="$refs.drawer.open()">
           <i>menu</i>
         </button>
@@ -25,7 +25,7 @@
       </q-drawer>
 
       <router-view class="layout-view"></router-view>
-
+      <div slot="footer" class="toolbar"></div>
     </q-layout>
   </div>
 </template>
