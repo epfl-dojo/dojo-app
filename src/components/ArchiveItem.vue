@@ -10,7 +10,7 @@
       <div class="card-title">
         The {{ type.type }} session
       </div>
-      <img src="https://unsplash.it/350/150?random&">
+      <img :src="type.img">
       <div class="card-content">
         <h4>{{ type.kick }}</h4>
         <span v-html="type.log"></span>
