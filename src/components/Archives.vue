@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-import hjson from 'hjson'
 import ArchiveItem from './ArchiveItem'
 export default {
   components: {ArchiveItem},
@@ -23,10 +21,11 @@ export default {
     }
   },
   created () {
-    axios.get('https://rawgit.com/epfl-dojo/dojo-data/master/events.hjson')
+    let that = this
+    this.$http.get('https://rawgit.com/epfl-dojo/dojo-data/master/events.hjson')
     .then((response) => {
       console.log(response.data.events)
-      let events = hjson.parse(response.data).events
+      let events = that.$hjson.parse(response.data).events
       this.events = events.sort(function (a, b) {
         return b.dojoid - a.dojoid
       })
