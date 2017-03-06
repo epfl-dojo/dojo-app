@@ -13,7 +13,17 @@
 <script>
 export default {
   data () {
-    return {}
+    return {
+      events: []
+    }
+  },
+  created () {
+    // TODO: Centralize the load of events in App.vue or even better in a vuex store
+    this.$http.get('https://rawgit.com/epfl-dojo/dojo-data/master/events.hjson')
+    .then((response) => {
+      let events = this.$hjson.parse(response.data).events
+      this.events = events
+    })
   }
 }
 </script>

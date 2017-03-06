@@ -21,11 +21,9 @@ export default {
     }
   },
   created () {
-    let that = this
     this.$http.get('https://rawgit.com/epfl-dojo/dojo-data/master/events.hjson')
     .then((response) => {
-      console.log(response.data.events)
-      let events = that.$hjson.parse(response.data).events
+      let events = this.$hjson.parse(response.data).events
       this.events = events.sort(function (a, b) {
         return b.dojoid - a.dojoid
       })

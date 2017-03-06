@@ -25,7 +25,10 @@
       </q-drawer>
 
       <router-view class="layout-view"></router-view>
-      <div slot="footer" class="toolbar"></div>
+
+      <div slot="footer" class="toolbar">
+        <p>Here comes the story of this app. <a href="https://github.com/epfl-dojo">EPFL-Dojo</a> FTW !</p>  
+      </div>
     </q-layout>
   </div>
 </template>
