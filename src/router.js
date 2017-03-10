@@ -31,7 +31,9 @@ export default new VueRouter({
     { path: '/events', component: load('Events') },
     // Links
     { path: '/links', component: load('Links') },
-    // Links
+    // Ideas
+    { path: '/ideas', component: load('Ideas') },
+    // About
     { path: '/about', component: load('About') },
     // 404
     { path: '*', component: load('Error404') } // Not found

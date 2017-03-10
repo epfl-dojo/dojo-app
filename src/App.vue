@@ -17,6 +17,7 @@
           <q-drawer-link icon="change_history" to="/events">Events</q-drawer-link>
           <q-drawer-link icon="line_weight" to="/archives">Timeline</q-drawer-link>
           <q-drawer-link icon="link" to="/links">Links</q-drawer-link>
+          <q-drawer-link icon="lightbulb_outline" to="/ideas">Ideas</q-drawer-link>
           <q-drawer-link icon="people" to="/about">About</q-drawer-link>
         </div>
         <div class="version">
@@ -27,7 +28,7 @@
       <router-view class="layout-view"></router-view>
 
       <div slot="footer" class="toolbar">
-        <p>Here comes the story of this app. <a href="https://github.com/epfl-dojo">EPFL-Dojo</a> FTW !</p>  
+        <p>Here comes the story of this app. <a href="https://github.com/epfl-dojo">EPFL-Dojo</a> FTW !</p>
       </div>
     </q-layout>
   </div>
