@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import moment from 'moment'
 import ArchiveItem from './ArchiveItem'
 export default {
   components: {ArchiveItem},
@@ -26,6 +27,8 @@ export default {
       let events = this.$hjson.parse(response.data).events
       this.events = events.sort(function (a, b) {
         return b.dojoid - a.dojoid
+      }).filter(function (i) {
+        return moment(i.date).format('YYYY-MM-DD') <= moment().format('YYYY-MM-DD')
       })
     })
   }
