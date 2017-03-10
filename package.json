@@ -15,7 +15,7 @@
     "fastclick": "^1.0.6",
     "hjson": "^2.4.1",
     "material-design-icons": "^3.0.1",
-    "moment": "^2.15.0",
+    "moment": "^2.17.1",
     "quasar-framework": "^0.13.1",
     "roboto-fontface": "^0.7.0",
     "vue": "2.1.10",

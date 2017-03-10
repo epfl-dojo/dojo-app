@@ -6,7 +6,7 @@
     <h4>Archives</h4>
   </div>
   <div class="timeline">
-     <archive-item :event='event' v-for="event in events"></archive-item>
+     <archive-item :event='event' v-for="event in events""></archive-item>
   </div>
 </div>
 </template>
