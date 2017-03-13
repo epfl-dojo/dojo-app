@@ -1,0 +1,44 @@
+$action-sheet-background       ?= $light
+$action-sheet-border-radius    ?= 13px
+$action-sheet-max-width        ?= 95%
+$action-sheet-margin-bottom    ?= .6rem
+$action-sheet-font-size        ?= 1.3rem
+$action-sheet-avatar-padding   ?= .6rem 1.1rem
+$action-sheet-hover-background ?= #d0d0d0
+
+.q-action-sheet-gallery
+  > div
+    padding $action-sheet-avatar-padding
+    border-radius $generic-border-radius
+    transition all .3s
+    &:hover, &:focus
+      background $action-sheet-hover-background
+      outline 0
+  i, img
+    font-size 2rem
+    margin-bottom 5px
+  .avatar
+    width 50px
+    height 50px
+
+.q-action-sheet
+  border-radius $action-sheet-border-radius
+  background $action-sheet-background
+  max-width $action-sheet-max-width
+  margin-left auto
+  margin-right auto
+  margin-bottom $action-sheet-margin-bottom
+  overflow hidden
+
+  .modal-header
+    border-bottom 2px solid $grey-4
+    padding-bottom 15px !important
+
+  .item-link
+    font-size $action-sheet-font-size
+    &:first-child
+      margin-top 0
+    &:last-child
+      margin-bottom 0
+    &:not(:last-child)
+      border-bottom 1px solid $grey-4
