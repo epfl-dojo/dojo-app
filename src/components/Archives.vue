@@ -6,16 +6,16 @@
     <h4>Archives</h4>
   </div>
   <div class="timeline">
-     <archive-item :event='event' v-for="event in events""></archive-item>
+     <dojo-time-line-item :event='event' v-for="event in events""></dojo-time-line-item>
   </div>
 </div>
 </template>
 
 <script>
 import moment from 'moment'
-import ArchiveItem from './ArchiveItem'
+import DojoTimeLineItem from './DojoTimeLineItem'
 export default {
-  components: {ArchiveItem},
+  components: {DojoTimeLineItem},
   data () {
     return {
       events: []

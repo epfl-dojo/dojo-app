@@ -2,18 +2,20 @@
   <!-- root node required -->
   <div>
     <!-- your content -->
-    <div class="layout-padding">
-      <!-- if you want automatic padding -->
-      <img src="https://unsplash.it/392/220?image=739" class="responsive" /><br>
-      Here comes the next dojo information
-      <pre>{{ events }}</pre>
+    <div class="timeline-label">
+      <h4>Events</h4>
+    </div>
+    <div class="timeline">
+       <dojo-time-line-item :event='event' v-for="event in events""></dojo-time-line-item>
     </div>
   </div>
 </template>
 
 <script>
 import moment from 'moment'
+import DojoTimeLineItem from './DojoTimeLineItem'
 export default {
+  components: {DojoTimeLineItem},
   data () {
     return {
       events: []
