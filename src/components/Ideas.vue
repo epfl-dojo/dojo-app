@@ -2,6 +2,7 @@
 <div>
   <div class="layout-padding">
     <h4>Ideas</h4>
+    <b>[WIP]</b>
     This page should retreive data from the list "ideas" from <a href="https://github.com/epfl-dojo/dojo-app/projects/1">dojo-app project</a>.
     <br />
     <br />
