@@ -7,7 +7,7 @@
           <i>menu</i>
         </button>
         <q-toolbar-title :padding="0">
-          EPFL-dojo
+          EPFL Dojo
         </q-toolbar-title>
       </div>
       <!-- Left side Drawer -->
@@ -21,14 +21,14 @@
           <q-drawer-link icon="people" to="/about">About</q-drawer-link>
         </div>
         <div class="version">
-          v0.0.1 / v{{$q.version}}
+          v0.0.2 / v{{$q.version}}
         </div>
       </q-drawer>
 
       <router-view class="layout-view"></router-view>
 
-      <div slot="footer" class="toolbar">
-        <p>Here comes the story of this app. <a href="https://github.com/epfl-dojo">EPFL-Dojo</a> FTW !</p>
+      <div slot="footer" class="footer">
+        <small>Check out <a href="https://github.com/epfl-dojo">EPFL-Dojo</a> gh repo.</small>
       </div>
     </q-layout>
   </div>
