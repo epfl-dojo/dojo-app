@@ -5,7 +5,24 @@
     <div class="layout-padding">
       <!-- if you want automatic padding -->
       <h3>About EPFL dojo</h3>
-      Well, it's <a href="http://codingdojo.org/WhatIsCodingDojo/">CodingDojo</a> <a href="https://www.epfl.ch">@epfl</a>.
+      <p>
+        Well, it's <a href="http://codingdojo.org/WhatIsCodingDojo/">CodingDojo</a>
+        <a href="https://www.epfl.ch">@epfl</a>. As said on
+        <a href="http://codingdojo.org/WhatIsCodingDojo/">codingdojo.org</a>:<br />
+        <blockquote>
+          A Coding Dojo is a meeting where a bunch of coders get together to work
+          on a programming challenge. They are there have to fun and to engage in
+          deliberate practice in order to improve their skills.
+        </blockquote>
+      </p>
+      <p>
+        We are organising two dojo sessions:
+        <ul>
+          <li>One for apprentice in computing (beginner)</li>
+          <li>One for computer specialists (advanced)</li>
+        </ul>
+        <small><em>To Be Completed</em></small>
+      </p>
 
       <h3>About this app</h3>
       <p>This app is a project started during Dojo sessions <router-link to="/archives#goto9">2017-03-03</router-link>, aiming to create
