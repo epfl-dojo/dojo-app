@@ -6,7 +6,7 @@
       <h4>Events</h4>
     </div>
     <div class="timeline">
-       <dojo-time-line-item :event='event' v-for="event in events""></dojo-time-line-item>
+       <dojo-time-line-item :event="event" v-for="event in events"></dojo-time-line-item>
     </div>
   </div>
 </template>
