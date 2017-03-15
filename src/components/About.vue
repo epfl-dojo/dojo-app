@@ -75,7 +75,7 @@ export default {
   },
   created () {
     // Getting the list of epfl-dojo repositories
-    this.$http.get('https://api.github.com/orgs/epfl-dojo/repos')
+    this.$http.get('https://api.github.com/orgs/epfl-dojo/repos?per_page=1000')
     .then((response) => {
       // TODO: oops, only 30 repos are retrived.
       this.dojoRepos = response.data.sort((a, b) => {
