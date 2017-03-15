@@ -13,8 +13,8 @@
       <img :src="type.img">
       <div class="card-content">
         <h5>{{ type.kick }}</h5>
-        <span v-html="type.desc"></span>
-        <span v-html="type.log"></span>
+        <span v-if="type.desc" v-html="type.desc"></span><br v-if="type.desc"/>
+        <span v-if="type.log" v-html="type.log"></span>
       </div>
     </div>
   </div>
