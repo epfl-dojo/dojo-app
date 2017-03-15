@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ch.epfl-dojo.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ch.epfl.dojo.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>EPFLDojo</name>
     <description>
         The EPFL Dojo application.
@@ -19,6 +19,20 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+        <icon src="www/statics/android-icon-36x36.png" density="ldpi" />
+        <icon src="www/statics/android-icon-48x48.png" density="mdpi" />
+        <icon src="www/statics/android-icon-72x72.png" density="hdpi" />
+        <icon src="www/statics/android-icon-96x96.png" density="xhdpi" />
+        <icon src="www/statics/android-icon-144x144.png" density="xxhdpi" />
+        <icon src="www/statics/android-icon-192x192.png" density="xxxhdpi" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
