@@ -53,7 +53,7 @@
       <h3>EPFL dojo repositories</h3>
       <ul>
         <li v-for="repo in dojoRepos">
-           <a :href="repo.html_url">{{ repo.full_name }}</a>
+           <a :href="repo.html_url">{{ repo.full_name }}</a> <small>{{ repo.stargazers_count }}★ {{ repo.forks_count }}⑂</small>
         </li>
       </ul>
     </div>
@@ -77,7 +77,10 @@ export default {
     // Getting the list of epfl-dojo repositories
     this.$http.get('https://api.github.com/orgs/epfl-dojo/repos')
     .then((response) => {
-      this.dojoRepos = response.data
+      // TODO: oops, only 30 repos are retrived.
+      this.dojoRepos = response.data.sort((a, b) => {
+        return b.stargazers_count - a.stargazers_count
+      })
       this.dojoRepos.map((repo) => {
         // For each repos, get the contributors
         this.$http.get(repo.contributors_url)
