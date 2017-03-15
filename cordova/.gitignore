@@ -1,2 +1,5 @@
 www
 hooks
+.idea
+private.build.json
+build.json
