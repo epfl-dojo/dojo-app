@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     contributors () {
-      return this.$_.uniqBy(this.dojoContributors, 'login' );
+      return this.$_.uniqBy(this.dojoContributors, 'login')
     }
   },
   created () {
