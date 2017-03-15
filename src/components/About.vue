@@ -8,6 +8,13 @@
 
       <h3>About this app</h3>
 
+      <h3>EPFL dojo contributors</h3>
+      <ul>
+        <li v-for="contributor in contributors">
+           <a :href="contributor.html_url"><img :src="contributor.avatar_url" width="30px"/>{{ contributor.login }}</a>
+        </li>
+      </ul>
+
       <h3>EPFL dojo repositories</h3>
       <ul>
         <li v-for="repo in dojoRepos">
@@ -26,12 +33,23 @@ export default {
       dojoContributors: []
     }
   },
+  computed: {
+    contributors () {
+      return this.$_.uniqBy(this.dojoContributors, 'login' );
+    }
+  },
   created () {
-    // Getting the list of epfl-dojo repositories
     this.$http.get('https://api.github.com/orgs/epfl-dojo/repos')
     .then((response) => {
       this.dojoRepos = response.data
-      return this.dojoRepos
+      this.dojoRepos.map((repo) => {
+        this.$http.get(repo.contributors_url)
+        .then((cont) => {
+          if (cont.data[0] !== undefined) {
+            this.dojoContributors.push(cont.data[0])
+          }
+        })
+      })
     })
   }
 }

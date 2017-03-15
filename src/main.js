@@ -11,10 +11,12 @@ import Quasar from 'quasar'
 import router from './router'
 import axios from 'axios'
 import hjson from 'hjson'
+import lodash from 'lodash'
 
 Vue.use(Quasar) // Install Quasar Framework
 Vue.prototype.$http = axios
 Vue.prototype.$hjson = hjson
+Vue.prototype.$_ = lodash
 
 Quasar.start(() => {
   /* eslint-disable no-new */
