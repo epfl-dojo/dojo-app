@@ -12,7 +12,8 @@
       </div>
       <img :src="type.img">
       <div class="card-content">
-        <h4>{{ type.kick }}</h4>
+        <h5>{{ type.kick }}</h5>
+        <span v-html="type.desc"></span>
         <span v-html="type.log"></span>
       </div>
     </div>

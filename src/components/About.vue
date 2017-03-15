@@ -39,10 +39,12 @@ export default {
     }
   },
   created () {
+    // Getting the list of epfl-dojo repositories
     this.$http.get('https://api.github.com/orgs/epfl-dojo/repos')
     .then((response) => {
       this.dojoRepos = response.data
       this.dojoRepos.map((repo) => {
+        // For each repos, get the contributors
         this.$http.get(repo.contributors_url)
         .then((cont) => {
           if (cont.data[0] !== undefined) {
