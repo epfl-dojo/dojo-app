@@ -46,7 +46,7 @@
       <h3>EPFL dojo contributors</h3>
       <ul>
         <li v-for="contributor in contributors">
-           <a :href="contributor.html_url"><img :src="contributor.avatar_url" width="30px"/>{{ contributor.login }}</a>
+          <avatar :dude='contributor' :size='20' :login='contributor.login'/>
         </li>
       </ul>
 
@@ -61,7 +61,9 @@
 </template>
 
 <script>
+import Avatar from './partials/Avatar'
 export default {
+  components: {Avatar},
   data () {
     return {
       dojoRepos: [],

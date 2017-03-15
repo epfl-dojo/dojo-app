@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Avatar from './Avatar'
+import Avatar from './partials/Avatar'
 export default {
   components: {Avatar},
   data () {

@@ -13,7 +13,7 @@
 
 <script>
 import moment from 'moment'
-import DojoTimeLineItem from './DojoTimeLineItem'
+import DojoTimeLineItem from './partials/DojoTimeLineItem'
 export default {
   components: {DojoTimeLineItem},
   data () {
