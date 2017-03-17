@@ -42,6 +42,10 @@
         All images came from <a href="https://unsplash.com">unsplash</a> and are
         licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a> (Public Domain).
       </p>
+      <h4>Release</h4>
+      You can check for new releases on <a href="https://github.com/epfl-dojo/dojo-app/releases">github</a>.<br />
+      An alpha version of the android app is on the play store (<a href="https://play.google.com/apps/testing/ch.epfl.dojo.app">ch.epfl.dojo.app</a>)
+      but as it's a closed alpha, you will need to require an access (i.e. mail to <a mailto="dojo-app@epfl.ch">dojo-app@epfl.ch</a>).
 
       <h3>EPFL dojo contributors</h3>
       <ul>
@@ -80,7 +84,6 @@ export default {
     // Getting the list of epfl-dojo repositories
     this.$http.get('https://api.github.com/orgs/epfl-dojo/repos?per_page=1000')
     .then((response) => {
-      // TODO: oops, only 30 repos are retrived.
       this.dojoRepos = response.data.sort((a, b) => {
         return b.stargazers_count - a.stargazers_count
       })

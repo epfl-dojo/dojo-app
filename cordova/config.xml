@@ -1,25 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ch.epfl.dojo.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>EPFLDojo</name>
-    <description>
-        The EPFL Dojo application.
-    </description>
-    <author email="epfl-dojo@groupes.epfl.ch" href="https://github.com/epfl-dojo">
-        EPFL Dojo Team
-    </author>
-    <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <preference name="xwalkMultipleApk" value="false"/>
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-        <!--
+<widget id="ch.epfl.dojo.app" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>EPFL Dojo</name>
+  <description>
+    The EPFL Dojo application.
+  </description>
+  <author email="epfl-dojo@groupes.epfl.ch" href="https://github.com/epfl-dojo">
+    EPFL Dojo Team
+  </author>
+  <content src="index.html"/>
+  <plugin name="cordova-plugin-whitelist" spec="1"/>
+  <!-- <preference name="xwalkMultipleApk" value="false"/> -->
+  <access origin="*"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="geo:*"/>
+  <platform name="android">
+    <preference name="fullscreen" value="false"/>
+    <allow-intent href="market:*"/>
+    <!--
             ldpi    : 36x36 px
             mdpi    : 48x48 px
             hdpi    : 72x72 px
@@ -27,15 +28,15 @@
             xxhdpi  : 144x144 px
             xxxhdpi : 192x192 px
         -->
-        <icon src="www/statics/android-icon-36x36.png" density="ldpi" />
-        <icon src="www/statics/android-icon-48x48.png" density="mdpi" />
-        <icon src="www/statics/android-icon-72x72.png" density="hdpi" />
-        <icon src="www/statics/android-icon-96x96.png" density="xhdpi" />
-        <icon src="www/statics/android-icon-144x144.png" density="xxhdpi" />
-        <icon src="www/statics/android-icon-192x192.png" density="xxxhdpi" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
+    <icon src="www/statics/android-icon-36x36.png" density="ldpi"/>
+    <icon src="www/statics/android-icon-48x48.png" density="mdpi"/>
+    <icon src="www/statics/android-icon-72x72.png" density="hdpi"/>
+    <icon src="www/statics/android-icon-96x96.png" density="xhdpi"/>
+    <icon src="www/statics/android-icon-144x144.png" density="xxhdpi"/>
+    <icon src="www/statics/android-icon-192x192.png" density="xxxhdpi"/>
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*"/>
+    <allow-intent href="itms-apps:*"/>
+  </platform>
 </widget>

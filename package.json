@@ -1,8 +1,8 @@
 {
-  "name": "quasar-app",
-  "version": "0.0.1",
-  "description": "A Quasar App",
-  "author": "Your Name",
+  "name": "dojo-app",
+  "version": "0.0.4",
+  "description": "An App for EPFL Dojos",
+  "author": "EPFL Dojo",
   "scripts": {
     "clean": "node build/script.clean.js",
     "dev": "node build/script.dev.js",

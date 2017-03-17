@@ -22,7 +22,7 @@
           <q-drawer-link icon="people" to="/about">About</q-drawer-link>
         </div>
         <div class="version">
-          v0.0.3 / v{{$q.version}}
+          v0.0.4 / v{{$q.version}}
         </div>
       </q-drawer>
 
