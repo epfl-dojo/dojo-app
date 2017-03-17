@@ -1,6 +1,6 @@
 # EPFL Dojo app
 
-> A Quasar project
+> A Quasar project that aims to centralize tools and communication for dojos at [EPFL](https:/www.epfl.ch)
 
 ## Initial Setup
 
