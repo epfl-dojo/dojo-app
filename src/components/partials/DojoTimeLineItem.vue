@@ -27,7 +27,19 @@ export default {
 }
 </script>
 <style>
-.card  {
-  margin: 20px;
+@media only screen and (min-width: 601px) {
+  .timeline-item {
+    width: calc(50% - 1rem);
+  }
+}
+.timeline-item:nth-child(2n+1):not(.on-right) .timeline-badge, .timeline-item.on-left .timeline-badge {
+    right: -2.5rem;
+}
+.timeline-item:nth-child(2n):not(.on-left) .timeline-badge, .timeline-item.on-right .timeline-badge {
+    left: -2.5rem;
+}
+.timeline-item {
+    position: relative;
+    padding: 0 1rem 1rem 1rem;
 }
 </style>
