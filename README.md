@@ -37,7 +37,7 @@ $ quasar lint
 
 ## Versions
 Note: when pushing a new version, be sure to check:
-  * [] `package.json`
-  * [] `src/App.vue`
-  * [] `electron/package.json`
-  * [] `cordova/config.xml`
+  * [ ] `package.json`
+  * [ ] `src/App.vue`
+  * [ ] `electron/package.json`
+  * [ ] `cordova/config.xml`
