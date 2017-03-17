@@ -1,9 +1,7 @@
 <template>
-  <!-- root node required -->
   <div>
-    <!-- your content -->
     <div class="layout-padding">
-      <!-- if you want automatic padding -->
+
       <h3>About EPFL dojo</h3>
       <p>
         Well, it's <a href="http://codingdojo.org/WhatIsCodingDojo/">CodingDojo</a>
@@ -25,32 +23,54 @@
       </p>
 
       <h3>About this app</h3>
-      <p>This app is a project started during Dojo sessions <router-link to="/archives#goto9">2017-03-03</router-link>, aiming to create
-      a central point of communication and ressource, with x-platefomes access.</p>
+      <p>This app is a project started during Dojo sessions
+        <router-link to="/archives#goto9">2017-03-03</router-link>,
+        aiming to create a central point of communication and ressource, with
+        x-platefoms access.
+      </p>
+
       <h4>Tech Stack</h4>
-      <p>This app is using <a href="http://quasar-framework.org/">Quasar Framework</a>,
-        so it's coded in <a href="https://vuejs.org/">VueJs 2</a>;
-        all the source code is avalaible on <a href="https://github.com/epfl-dojo/dojo-app">GitHub</a>.
+      <p>
+        This app is using <a href="http://quasar-framework.org/">Quasar
+        Framework</a>, so it's coded in <a href="https://vuejs.org/">VueJs 2</a>;
+        all the source code is avalaible on
+        <a href="https://github.com/epfl-dojo/dojo-app">GitHub</a>.
         <br />
         Content for archives and events are stored on another GitHub repo
         (<a href="https://github.com/epfl-dojo/dojo-data">dojo-data</a>) in the
         <a href="http://hjson.org">Hjson</a> format. Some of the data (like
         contributors) are retrieved from
         <a href="https://developer.github.com/v3/">GItHub API</a>.<br />
-        Logo and other design materials are stored on <a href="https://github.com/epfl-dojo/dojo-design">dojo-design</a>.
+        Logo and other design materials are stored on
+        <a href="https://github.com/epfl-dojo/dojo-design">dojo-design</a>.
         <br />
         All images came from <a href="https://unsplash.com">unsplash</a> and are
-        licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a> (Public Domain).
+        licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+          Creative Commons Zero</a> (Public Domain).
       </p>
-      <h4>Release</h4>
-      You can check for new releases on <a href="https://github.com/epfl-dojo/dojo-app/releases">github</a>.<br />
-      An alpha version of the android app is on the play store (<a href="https://play.google.com/apps/testing/ch.epfl.dojo.app">ch.epfl.dojo.app</a>)
-      but as it's a closed alpha, you will need to require an access (i.e. mail to <a mailto="dojo-app@epfl.ch">dojo-app@epfl.ch</a>).
+
+      <h4>Releases</h4>
+      You can check for releases on
+      <a href="https://github.com/epfl-dojo/dojo-app/releases">GitHub</a>.
+      This is the latest three:
+      <ul>
+        <li :appReleases="appReleases" v-for="release in appReleases">
+          {{ release.created_at | shortDate }}
+          (<a :href="release.html_url">{{ release.tag_name }}</a>):
+          {{ release.name }}<br /><em>{{ release.body }}</em>
+        </li>
+      </ul>
+      An alpha version of the Android app is on the play store
+      (<a href="https://play.google.com/apps/testing/ch.epfl.dojo.app">
+        ch.epfl.dojo.app
+      </a>)
+      but as it's a closed alpha, you will need to require an access
+      (i.e. mail to <a mailto="dojo-app@epfl.ch">dojo-app@epfl.ch</a>).
 
       <h3>EPFL dojo contributors</h3>
       <ul>
         <li v-for="contributor in contributors">
-          <avatar :dude="contributor" :size="20" :login="1"/>
+          <avatar :dude="contributor" :size="20" :login="1" :follow="0" />
         </li>
       </ul>
 
@@ -65,6 +85,7 @@
 </template>
 
 <script>
+import moment from 'moment'
 import Avatar from './partials/Avatar'
 import Impact from './partials/Impact'
 export default {
@@ -72,7 +93,8 @@ export default {
   data () {
     return {
       dojoRepos: [],
-      dojoContributors: []
+      dojoContributors: [],
+      appReleases: []
     }
   },
   computed: {
@@ -97,6 +119,18 @@ export default {
         })
       })
     })
+    // Get the 3 last releases info
+    this.$http.get('https://api.github.com/repos/epfl-dojo/dojo-app/releases')
+    .then((response) => {
+      this.appReleases = this.$_.chunk(response.data, 3)[0]
+    })
+  },
+  filters: {
+    // Transform 2017-03-17T13:48:55Z into 2017-03-17
+    shortDate: function (value) {
+      if (!value) return ''
+      return moment(value).format('YYYY-MM-DD')
+    }
   }
 }
 </script>
