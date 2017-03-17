@@ -46,14 +46,14 @@
       <h3>EPFL dojo contributors</h3>
       <ul>
         <li v-for="contributor in contributors">
-          <avatar :dude='contributor' :size='20' :login='contributor.login'/>
+          <avatar :dude="contributor" :size="20" :login="1"/>
         </li>
       </ul>
 
       <h3>EPFL dojo repositories</h3>
       <ul>
         <li v-for="repo in dojoRepos">
-           <a :href="repo.html_url">{{ repo.full_name }}</a> <small>{{ repo.stargazers_count }}★ {{ repo.forks_count }}⑂</small>
+           <a :href="repo.html_url">{{ repo.full_name }}</a> <small><impact :repo="repo"/></small>
         </li>
       </ul>
     </div>
@@ -62,8 +62,9 @@
 
 <script>
 import Avatar from './partials/Avatar'
+import Impact from './partials/Impact'
 export default {
-  components: {Avatar},
+  components: {Avatar, Impact},
   data () {
     return {
       dojoRepos: [],

@@ -5,8 +5,8 @@
     <b>[WIP]</b> This page should retreive data from the list "ideas" from <a href="https://github.com/epfl-dojo/dojo-app/projects/1">dojo-app project</a>.
     <br />
     <br />
-    <div v-for='card in cards'>
-      <avatar :dude='card.creator' :size="50" />
+    <div v-for="card in cards">
+      <avatar :dude="card.creator" :size="50" />
       <div>
         {{card.note}}
       </div>
