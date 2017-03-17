@@ -24,6 +24,5 @@ div.topic {
   border-radius: 4px;
   padding: 5px;
   margin: 15px;
-  line-height: 2em;
 }
 </style>
