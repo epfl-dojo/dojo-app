@@ -13,3 +13,4 @@ thumbs.db
 *.log
 .vscode
 
+cordova/default.build.json
