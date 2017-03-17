@@ -18,6 +18,7 @@
           <q-drawer-link icon="line_weight" to="/archives">Timeline</q-drawer-link>
           <q-drawer-link icon="link" to="/links">Links</q-drawer-link>
           <q-drawer-link icon="lightbulb_outline" to="/ideas">Ideas</q-drawer-link>
+          <q-drawer-link icon="grade" to="/epfl-topics">EPFL-topics</q-drawer-link>
           <q-drawer-link icon="people" to="/about">About</q-drawer-link>
         </div>
         <div class="version">
@@ -39,6 +40,8 @@
  * Root component
  */
   export default {}
+
+var foo = "bar" + 'baz';
 
 </script>
 

@@ -33,6 +33,7 @@ export default new VueRouter({
     { path: '/links', component: load('Links') },
     // Ideas
     { path: '/ideas', component: load('Ideas') },
+    { path: '/epfl-topics', component: load('EPFLTopics') },
     // About
     { path: '/about', component: load('About') },
     // 404
