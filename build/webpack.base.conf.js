@@ -35,6 +35,16 @@ module.exports = {
   },
   module: {
     rules: [
+      { // eslint
+        enforce: 'pre',
+        test: /\.(vue|js)$/,
+        loader: 'eslint-loader',
+        include: projectRoot,
+        exclude: /node_modules/,
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',

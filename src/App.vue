@@ -40,9 +40,6 @@
  * Root component
  */
   export default {}
-
-var foo = "bar" + 'baz';
-
 </script>
 
 <style>

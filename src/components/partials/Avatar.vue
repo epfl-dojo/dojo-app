@@ -1,7 +1,7 @@
 <template lang="html">
-  <div class="avatar">
+  <span class="avatar">
     <a :href="dude.html_url"><img class="avatarimg" :src="dude.avatar_url" alt="" :width="size + 'px'" :title="dude.login" /><span v-if="login"> @{{ dude.login }}</span></a>
-  </div>
+  </span>
 </template>
 
 <script>

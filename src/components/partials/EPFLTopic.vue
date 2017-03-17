@@ -20,9 +20,10 @@ export default {
 </script>
 <style>
 div.topic {
-  border: 1px solid lightgreen;
+  border-left: 1px solid lightgreen;
   border-radius: 4px;
-  margin: 20px;
+  padding: 5px;
+  margin: 15px;
   line-height: 2em;
 }
 </style>
