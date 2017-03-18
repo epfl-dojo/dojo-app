@@ -1,5 +1,7 @@
 <template>
+  <!-- root node required -->
   <div>
+    <!-- your content -->
     <div class="layout-padding">
 
       <h3>About EPFL dojo</h3>
@@ -66,11 +68,9 @@
       (i.e. mail to <a mailto="dojo-app@epfl.ch">dojo-app@epfl.ch</a>).
 
       <h3>EPFL dojo contributors</h3>
-      <ul>
-        <li v-for="contributor in contributors">
-          <avatar :dude="contributor" :size="20" :login="1" :follow="0" />
-        </li>
-      </ul>
+      <div v-for="contributor in contributors" class="contributorBlock">
+        <avatar :dude="contributor" :size="20" :login="1"/>
+      </div>
 
       <h3>EPFL dojo repositories</h3>
       <ul>
@@ -132,3 +132,8 @@ export default {
   }
 }
 </script>
+<style>
+.contributorBlock {
+  line-height: 2em;
+}
+</style>
