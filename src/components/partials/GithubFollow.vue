@@ -1,14 +1,16 @@
 <template>
-  <span class="github-btn">
-      <a class="gh-btn" id="gh-btn" :href="userprofil" target="_blank" :aria-label="ariaprofil">
-          <span class="gh-ico" aria-hidden="true"></span>
-        <span class="gh-text" id="gh-text">Follow @{{username}}</span>
-      </a>
-      <a class="gh-count"
-        :href="userfollowers"
-        target="_blank"
-        :aria-label="ariafollowers"
-        style="display: block;">{{followers.length}}</a>
+  <span class="ghblock">
+    <div class="github-btn">
+        <a class="gh-btn" id="gh-btn" :href="userprofil" target="_blank" :aria-label="ariaprofil">
+            <span class="gh-ico" aria-hidden="true"></span>
+          <span class="gh-text" id="gh-text">@{{username}}</span>
+        </a>
+        <a class="gh-count"
+          :href="userfollowers"
+          target="_blank"
+          :aria-label="ariafollowers"
+          style="display: block;">{{followers.length}}</a>
+    </div>
   </span>
 </template>
 
@@ -44,6 +46,11 @@ export default {
 </script>
 
 <style scoped>
+.ghblock {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+}
 .github-btn {
   overflow: hidden;
   display: inline;
