@@ -61,9 +61,7 @@
         </li>
       </ul>
       An alpha version of the Android app is on the play store
-      (<a href="https://play.google.com/apps/testing/ch.epfl.dojo.app">
-        ch.epfl.dojo.app
-      </a>)
+      (<a href="https://play.google.com/apps/testing/ch.epfl.dojo.app">ch.epfl.dojo.app</a>)
       but as it's a closed alpha, you will need to require an access
       (i.e. mail to <a mailto="dojo-app@epfl.ch">dojo-app@epfl.ch</a>).
 
