@@ -2,7 +2,9 @@
   <div>
     <div class="layout-padding">
       <h4>EPFL-ish code</h4>
-      <p>This page list all the github repositories that have the "epfl" topic.</p>
+      <p>
+        This page list all the GitHub repositories that are "epfl" topic tagged.
+      </p>
       <epfl-topic :topic="topic" v-for="topic in topics" />
     </div>
   </div>
