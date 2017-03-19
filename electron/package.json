@@ -1,13 +1,19 @@
 {
   "name": "EPFLDojoApp",
-  "version": "0.0.4",
-  "author": "EPFL-Dojo",
-  "description": "EPFL Dojo app",
+  "version": "1.0.5",
+  "description": "An App for EPFL's Dojos",
+  "author": "EPFL Dojo <epfl-dojo@groupes.epfl.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epfl-dojo/dojo-app/issues"
+  },
+  "homepage": "https://github.com/epfl-dojo/dojo-app#readme",
   "main": "electron.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development electron src/main.js",
     "clean": "node build/script.clean.js",
-    "build": "node build/script.build.js"
+    "build": "node build/script.build.js",
+    "deb": "electron-installer-debian --src dist/EPFLDojoApp-linux-x64 --dest dist/installers/ --arch amd64"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -26,5 +32,9 @@
     "shelljs": "^0.7.5",
     "webpack": "^2.2.1",
     "webpack-merge": "^3.0.0"
+  },
+  "dependencies": {
+    "electron-installer-debian": "^0.5.0",
+    "electron-installer-windows": "^0.2.0"
   }
 }

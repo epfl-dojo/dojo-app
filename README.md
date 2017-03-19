@@ -26,14 +26,14 @@ $ quasar lint
     `cd cordova && quasar build && cordova run android`
 
   * Release signed APK:  
-    `quasar build && cordova build android --release -- --keystore="epfldojo.keystore" --storePassword="XXXX" --alias=epfldojorelease`
+    `cd cordova && quasar build && cordova build android --release -- --keystore="epfldojo.keystore" --storePassword="XXXX" --alias=epfldojorelease`
 
 ### Electron
   * Build electron package:  
     `cd electron && quasar build`
 
   * To create a `.deb` file:  
-    `cd electron && electron-installer-debian --src dist/EPFLDojoApp-linux-x64 --dest dist/installers/ --arch amd64`
+    `cd electron && quasar build && electron-installer-debian --src dist/EPFLDojoApp-linux-x64 --dest dist/installers/ --arch amd64`
 
 ## Versions
 Note: when pushing a new version, be sure to check:

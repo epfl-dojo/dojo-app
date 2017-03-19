@@ -1,8 +1,7 @@
 {
-  "name": "dojo-app",
-  "version": "0.0.4",
-  "description": "An App for EPFL Dojos",
-  "author": "EPFL Dojo",
+  "name": "EPFLDojoApp",
+  "version": "1.0.5",
+  "description": "An App for EPFL's Dojos",
   "scripts": {
     "clean": "node build/script.clean.js",
     "dev": "node build/script.dev.js",
@@ -63,5 +62,25 @@
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.17.0",
     "webpack-merge": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epfl-dojo/dojo-app.git"
+  },
+  "keywords": [
+    "epfl",
+    "dojo",
+    "epfl-dojo",
+    "dojo-app",
+    "quasar",
+    "vuejs",
+    "electron",
+    "cordova"
+  ],
+  "author": "EPFL Dojo <epfl-dojo@groupes.epfl.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epfl-dojo/dojo-app/issues"
+  },
+  "homepage": "https://github.com/epfl-dojo/dojo-app#readme"
 }
