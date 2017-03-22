@@ -1,9 +1,6 @@
 <template>
-  <!-- root node required -->
   <div>
-    <!-- your content -->
     <div class="layout-padding">
-      <!-- if you want automatic padding -->
       <h3>Home</h3>
       <p>
         This is "our" EPFL dojo app. You can have a look to our
@@ -28,7 +25,11 @@
     </div>
   </div>
 </template>
-
 <script>
-export default {}
+  export default {}
 </script>
+<style>
+.layout-padding {
+  padding-top: 1rem;
+}
+</style>
