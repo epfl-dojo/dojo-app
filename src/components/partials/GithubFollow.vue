@@ -1,9 +1,9 @@
 <template>
   <span class="ghblock">
     <div class="github-btn">
-        <a class="gh-btn" id="gh-btn" :href="userprofil" target="_blank" :aria-label="ariaprofil">
+        <a class="gh-btn" id="gh-btn" :href="dude.html_url" target="_blank" :aria-label="ariaprofil">
             <span class="gh-ico" aria-hidden="true"></span>
-          <span class="gh-text" id="gh-text">@{{ username }}</span>
+          <span class="gh-text" id="gh-text">@{{ dude.login }}</span>
         </a>
         <a class="gh-count"
           :href="userfollowers"
@@ -16,30 +16,29 @@
 
 <script>
 export default {
-  props: ['username'],
+  props: ['dude'],
   data () {
     return {
-      followers: []
+      followers: ''
     }
   },
   created () {
-    this.$http.get(`https://api.github.com/users/${this.username}`)
-      .then((response) => {
-        this.followers = response.data.followers
-      })
+    // Just because of the followers props is not present in the contributors_url
+    // we need to re-query the API just for that. (@TODO)
+    this.$http.get(`https://api.github.com/users/` + this.dude.login)
+    .then((response) => {
+      this.followers = response.data.followers
+    })
   },
   computed: {
-    userprofil () {
-      return `https://github.com/${this.username}`
-    },
     ariaprofil () {
-      return `Follow @${this.username} on GitHub`
+      return `Follow @` + this.dude.login + ` on GitHub`
     },
     userfollowers () {
-      return `https://github.com/${this.username}/followers`
+      return `https://github.com/` + this.dude.login + `/followers`
     },
     ariafollowers () {
-      return `${this.followers} followers on GitHub`
+      return this.dude.login + ` followers on GitHub`
     }
   }
 }

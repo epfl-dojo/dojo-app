@@ -3,14 +3,14 @@
     <a :href="dude.html_url">
       <img class="avatarimg" :src="dude.avatar_url" alt="" :width="size + 'px'" :title="dude.login" />
     </a>
-    <github-follow :username="dude.login"></github-follow>
+    <github-follow :dude="dude"></github-follow>
   </span>
 </template>
 
 <script>
 import GithubFollow from './GithubFollow'
 export default {
-  props: ['dude', 'size', 'login'],
+  props: ['dude', 'size'],
   components: {GithubFollow}
 }
 </script>
