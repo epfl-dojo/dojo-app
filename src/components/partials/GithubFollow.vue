@@ -3,13 +3,13 @@
     <div class="github-btn">
         <a class="gh-btn" id="gh-btn" :href="userprofil" target="_blank" :aria-label="ariaprofil">
             <span class="gh-ico" aria-hidden="true"></span>
-          <span class="gh-text" id="gh-text">@{{username}}</span>
+          <span class="gh-text" id="gh-text">@{{ username }}</span>
         </a>
         <a class="gh-count"
           :href="userfollowers"
           target="_blank"
           :aria-label="ariafollowers"
-          style="display: block;">{{followers.length}}</a>
+          style="display: block;">{{ followers }}</a>
     </div>
   </span>
 </template>
@@ -23,9 +23,9 @@ export default {
     }
   },
   created () {
-    this.$http.get(`https://api.github.com/users/${this.username}/followers`)
+    this.$http.get(`https://api.github.com/users/${this.username}`)
       .then((response) => {
-        this.followers = response.data
+        this.followers = response.data.followers
       })
   },
   computed: {
@@ -39,7 +39,7 @@ export default {
       return `https://github.com/${this.username}/followers`
     },
     ariafollowers () {
-      return `${this.followers.length} followers on GitHub`
+      return `${this.followers} followers on GitHub`
     }
   }
 }
