@@ -59,7 +59,7 @@
         <li :appReleases="appReleases" v-for="release in appReleases">
           {{ release.created_at | shortDate }}
           (<a :href="release.html_url">{{ release.tag_name }}</a>):
-          {{ release.name }}<br /><em>{{ release.body }}</em>
+          {{ release.name }}<br /><pre>{{ release.body }}</pre>
         </li>
       </ul>
       An alpha version of the Android app is on the play store
