@@ -6,7 +6,7 @@
         <button class="hide-on-drawer-visible" @click="$refs.drawer.open()">
           <i>menu</i>
         </button>
-        <q-toolbar-title :padding="0">
+        <q-toolbar-title>
           EPFL Dojo
         </q-toolbar-title>
       </div>
@@ -22,7 +22,7 @@
           <q-drawer-link icon="people" to="/about">About</q-drawer-link>
         </div>
         <div class="version">
-          v1.0.5 / v{{$q.version}}
+          v1.0.6 / v{{$q.version}}
         </div>
       </q-drawer>
 
@@ -48,5 +48,9 @@
   align-items:center;
   justify-content:center;
   font-size: small;
+}
+.toolbar-title {
+  text-align: center;
+  padding: 0;
 }
 </style>
