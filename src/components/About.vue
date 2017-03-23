@@ -59,7 +59,7 @@
         <li :appReleases="appReleases" v-for="release in appReleases">
           {{ release.created_at | shortDate }}
           (<a :href="release.html_url">{{ release.tag_name }}</a>):
-          {{ release.name }}<br /><pre>{{ release.body }}</pre>
+          {{ release.name }}<br /><pre class="releasesnote">{{ release.body }}</pre>
         </li>
       </ul>
       An alpha version of the Android app is on the play store
@@ -135,5 +135,13 @@ export default {
 <style>
 .contributorBlock {
   line-height: 2em;
+}
+.releasesnote {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    font-size: small;
 }
 </style>
