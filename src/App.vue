@@ -9,6 +9,7 @@
         <q-toolbar-title>
           EPFL Dojo
         </q-toolbar-title>
+        <img src="~statics/16x16.png" class="responsive" title="EPFL Dojo FTW ʅʕ•ᴥ•ʔʃ" />
       </div>
       <!-- Left side Drawer -->
       <q-drawer ref="drawer">
