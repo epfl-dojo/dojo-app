@@ -27,7 +27,7 @@ export default {
     .then((response) => {
       let events = this.$hjson.parse(response.data).events
       this.events = events.filter(function (i, n) {
-        return moment(i.date) > moment()
+        return moment(i.date) > moment().subtract(1, 'days')
       })
     })
   }
