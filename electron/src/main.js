@@ -7,6 +7,7 @@ const
   BrowserWindow = electron.BrowserWindow
 
 let mainWindow
+var iconPath = path.join(__dirname, '../icons/32x32.png')
 
 function createWindow () {
   /**
@@ -14,7 +15,9 @@ function createWindow () {
    */
   mainWindow = new BrowserWindow({
     height: 600,
-    width: 800
+    width: 800,
+    title: 'EPFL Dojo',
+    icon: iconPath
   })
 
   mainWindow.loadURL(

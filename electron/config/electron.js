@@ -10,7 +10,7 @@ module.exports = {
   arch: 'x64',
   asar: true,
   dir: path.join(__dirname, '../../dist'),
-  icon: path.join(__dirname, '../icons/icon'),
+  icon: path.join(__dirname, '../icons/32x32.png'),
   ignore: /\b(node_modules|src|icons)\b/,
   out: path.join(__dirname, '../dist'),
   overwrite: true,
