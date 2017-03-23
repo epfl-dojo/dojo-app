@@ -12,6 +12,7 @@ thumbs.db
 !.gitkeep
 *.log
 .vscode
+debug.log
 
 cordova/default.build.json
 src/assets/unsplash
