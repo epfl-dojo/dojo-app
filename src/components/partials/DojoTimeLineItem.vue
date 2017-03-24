@@ -14,7 +14,7 @@
       <div class="card-content">
         <h5>{{ type.kick }}</h5>
         <span v-if="type.desc" v-html="type.desc"></span><br v-if="type.desc"/>
-        <pre class="logsnotes" v-if="type.log" v-html="type.log"></pre>
+        <div class="logsnotes" v-if="type.log" v-html="$marked(type.log)"></div>
       </div>
     </div>
   </div>
