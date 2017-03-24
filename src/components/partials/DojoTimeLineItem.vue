@@ -14,7 +14,7 @@
       <div class="card-content">
         <h5>{{ type.kick }}</h5>
         <span v-if="type.desc" v-html="type.desc"></span><br v-if="type.desc"/>
-        <span v-if="type.log" v-html="type.log"></span>
+        <pre class="logsnotes" v-if="type.log" v-html="type.log"></pre>
       </div>
     </div>
   </div>
@@ -41,5 +41,13 @@ export default {
 .timeline-item {
     position: relative;
     padding: 0 1rem 1rem 1rem;
+}
+.logsnotes {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    font-size: small;
 }
 </style>
